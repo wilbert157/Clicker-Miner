@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Miner Clicker</title>
+	<link rel="stylesheet" type="text/css" href="interface.css" />
+</head>
+<body>
+	<div id="header">
+		<h1>The Miner</h1>
+		<h3><em>An incremental style game</em></h3><br />
+	</div>
+	<div id="totalStorage">
+		<div id="rawResources">
+			<table id="rawStorage">
+				<caption><h2>Raw Resources</h2></caption>
+				<thead>
+					<tr>
+						<th scope="col">Type</th>
+						<th scope="col">Amount</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td scope="row">Stone</th>
+						<td><span id="rocks">0</span></td>
+					</tr>
+					<tr>
+						<td scope="row">Coal</th>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td scope="row">Copper Ore</th>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td scope="row">Tin ore</th>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td scope="row">Iron Ore</th>
+						<td>0</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="refinedResources">
+			<table id="refinedStorage">
+				<caption><h2>Refined Resources</h2></caption>
+				<thead>
+					<tr>
+						<th scope="col">Type</th>
+						<th scope="col">Amount</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td scope="row">Copper Ingot</th>
+						<td><span id="copperIngot">0</span></td>
+					</tr>
+					<tr>
+						<td scope="row">Tin Ingot</th>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td scope="row">Iron Ingot</th>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td scope="row">Steel Ingot</th>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td scope="row">Coal Coke</td>
+						<td>0</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div id="rightPanel">
+		<div id="tabHeader">
+			<div class="tab"> <!-- Tab links -->
+			  <button class="tablinks" onclick="openTab(event, 'miningArea')" id="miningTab">Mining Area</button>
+			  <button class="tablinks" onclick="openTab(event, 'smelting')" id="smeltingTab">Smelting</button>
+			  <button class="tablinks" onclick="openTab(event, 'crafting')" id="craftingTab">Crafting</button>
+			  <button class="tablinks" onclick="openTab(event, 'upgrades')" id="upgradesTab">Upgrades</button>
+			</div>
+		</div>
+		<div id="rpTabContent"> <!-- Tab content -->
+			<div id="miningArea" class="tabcontent">
+				<div id="miningStoneQuarry">
+					<br />
+					<button onClick="rockClick(pick)">Stone Quarry</button><br />
+					Rocks per Click: <span id="pick">1</span><br /><br />
+				</div>
+				<div id="coalMineArea">
+					<button class="button coalMineButton">Coal Mine</button>
+					<br />
+					<br />
+				</div>
+				<div id="copperMineArea">
+					<button class="button copperMineButton">Copper Mine</button>
+					<br />
+					<br />
+				</div>
+				<div id="miningMountain">
+					<button class="button tinMineButton">Tin Mine</button>
+					<br />
+					<br />
+				</div>
+				<div id="miningMountain">
+					<button class="button ironMineButton">Iron Mine</button>
+					<br />
+					<br />
+				</div>
+				<div id="miningMountain">
+					<button class ="button goldMineButton">Gold Mine</button>
+				</div>
+			</div>
+			<div id="smelting" class="tabcontent">
+				<h3>Smelting Area - Work in progress</h3>
+				<div id="oreSmeltingArea">
+					<table id="oreSmeltingTable">
+						<caption><h2>Ore Smelting</h2></caption>
+						<tbody>
+							<tr>
+								<th><h3>Furnace Fuel:</h3></th>
+								<th>0</th>
+							</tr>
+							<tr>
+								<td scope="row">Copper Ore:</td>
+								<td>0</td>
+								<td><input type="number" id="inputCopperSmelting"></td>
+								<td><button>Max</button></td>
+								<td><button>Start</button></td>
+								<td>Queue:</td>
+								<td>0</td>
+								<td>Running</td>
+							</tr>
+							<tr>
+								<td scope="row">Tin Ore:</td>
+								<td>0</td>
+								<td><input type="number" id="inputTinSmelting"></td>
+								<td><button>Max</button></td>
+								<td><button>Start</button></td>
+								<td>Queue:</td>
+								<td>0</td>
+								<td>Running</td>
+							</tr>
+							<tr>
+								<td scope="row">Iron Ore:</td>
+								<td>0</td>
+								<td><input type="number" id="inputIronSmelting"></td>
+								<td><button>Max</button></td>
+								<td><button>Start</button></td>
+								<td>Queue:</td>
+								<td>0</td>
+								<td>Running</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div id="steelBlastFurnace">
+					<h3> Steel Production - work in progress</h3>
+					<p>Combine Coal Coke and Iron ore into a blast furnace to produce steel</p>
+					<p>Coke Production: Put 1 coal into the Coke oven to produce 1 Coal coke</p>
+					<table id="cokeOvenTable">
+						<caption><h2>Coke Oven</h2></caption>
+						<tbody>
+							<tr>
+								<td scope="row">Coal:</td>
+								<td>0</td>
+								<td><input type="number" id="inputCoalOven"></td>
+								<td><button>Max</button></td>
+								<td><button>Start</button></td>
+								<td>Queue:</td>
+								<td>0</td>
+								<td>Running</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div id="crafting" class="tabcontent">
+				<h3>Crafting - Work in progress</h3>
+			</div>
+			<div id="upgrades" class="tabcontent">
+				<h3>Upgrades - Work in progress</h3>
+				<button onClick="upgradePickaxe()">Upgrade Pickaxe</button>
+				Bonus Given: +<span id="pickBonus">0</span>
+				<br />
+				Upgrade Cost: <span id="upgradeCost">10</span>
+			</div>
+		</div>
+	</div>	
+		<!-- JS script link needs to be at the bottom of body -->
+		<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
