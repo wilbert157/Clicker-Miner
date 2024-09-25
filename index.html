@@ -26,19 +26,23 @@
 					</tr>
 					<tr>
 						<td scope="row">Coal</th>
-						<td>0</td>
+						<td><span id="coalOre">0</span></td>
 					</tr>
 					<tr>
 						<td scope="row">Copper Ore</th>
-						<td>0</td>
+						<td><span id="copperOre">0</span></td>
 					</tr>
 					<tr>
 						<td scope="row">Tin ore</th>
-						<td>0</td>
+						<td><span id="tinOre">0</span></td>
 					</tr>
 					<tr>
 						<td scope="row">Iron Ore</th>
-						<td>0</td>
+						<td><span id="ironOre">0</span></td>
+					</tr>
+					<tr>
+						<td scope="row">Gold Ore</th>
+						<td><span id="goldOre">0</span></td>
 					</tr>
 				</tbody>
 			</table>
@@ -86,36 +90,37 @@
 			  <button class="tablinks" onclick="openTab(event, 'upgrades')" id="upgradesTab">Upgrades</button>
 			</div>
 		</div>
+		<br />
 		<div id="rpTabContent"> <!-- Tab content -->
 			<div id="miningArea" class="tabcontent">
-				<div id="miningStoneQuarry">
-					<br />
-					<button onClick="rockClick(pick)">Stone Quarry</button><br />
-					Rocks per Click: <span id="pick">1</span><br /><br />
-				</div>
-				<div id="coalMineArea">
-					<button class="button coalMineButton">Coal Mine</button>
-					<br />
-					<br />
-				</div>
-				<div id="copperMineArea">
-					<button class="button copperMineButton">Copper Mine</button>
-					<br />
-					<br />
-				</div>
-				<div id="miningMountain">
-					<button class="button tinMineButton">Tin Mine</button>
-					<br />
-					<br />
-				</div>
-				<div id="miningMountain">
-					<button class="button ironMineButton">Iron Mine</button>
-					<br />
-					<br />
-				</div>
-				<div id="miningMountain">
-					<button class ="button goldMineButton">Gold Mine</button>
-				</div>
+				<table id="mineOreTable">
+					<tbody>
+						<tr>
+							<td><button class="button stoneMineButton" onClick="rockClick(pick)">Stone Quarry</button></td>
+							<td>Stone per click: <span id="pick">1</span></td>
+						</tr>
+						<tr>
+							<td><button class="button coalMineButton" onClick="coalClick(pick)">Coal Mine</button></td>
+							<td>Coal ore per click:</td>
+						</tr>
+						<tr>
+							<td><button class="button copperMineButton" onClick="copperClick(pick)">Copper Mine</button></td>
+							<td>Copper ore per click:</td>
+						</tr>
+						<tr>
+							<td><button class="button tinMineButton" onClick="tinClick(pick)">Tin Mine</button></td>
+							<td>Tin ore per click:</td>
+						</tr>
+						<tr>
+							<td><button class="button ironMineButton" onClick="ironClick(pick)">Iron Mine</button></td>
+							<td>Iron ore per click:</td>
+						</tr>
+						<tr>
+							<td><button class ="button goldMineButton" onClick="goldClick(pick)">Gold Mine</button></td>
+							<td>Gold ore per click:</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<div id="smelting" class="tabcontent">
 				<h3>Smelting Area - Work in progress</h3>
@@ -151,6 +156,16 @@
 								<td scope="row">Iron Ore:</td>
 								<td>0</td>
 								<td><input type="number" id="inputIronSmelting"></td>
+								<td><button>Max</button></td>
+								<td><button>Start</button></td>
+								<td>Queue:</td>
+								<td>0</td>
+								<td>Running</td>
+							</tr>
+							<tr>
+								<td scope="row">Gold Ore:</td>
+								<td>0</td>
+								<td><input type="number" id="inputGoldSmelting"></td>
 								<td><button>Max</button></td>
 								<td><button>Start</button></td>
 								<td>Queue:</td>

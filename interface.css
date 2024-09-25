@@ -72,7 +72,6 @@ thead th {
 .tab button:hover {
   background-color: #ddd;
 }
-
 /* Create an active/current tablink class */
 .tab button.active {
   background-color: #ccc;
@@ -96,8 +95,79 @@ thead th {
 	border: none;
 	border-collapse: collapse;
 }
-
+.stoneMineButton {
+	font-size: 22px;
+	padding: 10px 10px;
+	width: 152.5px;
+	border-radius: 8px;
+	border: none;
+	background-color: #DFDBC6;
+}
+.stoneMineButton:active {
+	transform: scale(0.95);
+}
 .coalMineButton {
 	background-color: #000000;
 	color: white;
+	font-size: 22px;
+	padding: 10px 10px;
+	width: 152.5px;
+	border-radius: 8px;
+	border: none;
+}
+.coalMineButton:active {
+	transform: scale(0.95);
+}
+.copperMineButton {
+	background-color: #b87333;
+	color: white;
+	font-size: 22px;
+	padding: 10px 10px;
+	width: 152.5px;
+	border: none;
+	border-radius: 8px;
+}
+.copperMineButton:active {
+	transform: scale(0.95);
+}
+.tinMineButton {
+	background-color: #dddddd;
+	color: black;
+	font-size: 22px;
+	padding: 10px 10px;
+	width: 152.5px;
+	border-radius: 8px;
+	border: none;
+}
+.tinMineButton:active {
+	transform: scale(0.95);
+}
+.ironMineButton {
+	background-color: #A19D94;
+	color: white;
+	font-size: 22px;
+	padding: 10px 10px;
+	width: 152.5px;
+	border-radius: 8px;
+	border: none;
+}
+.ironMineButton:active {
+	transform: scale(0.95);
+}
+.goldMineButton {
+	background-color: #ffd700;
+	color: black;
+	font-size: 22px;
+	padding: 10px 10px;
+	width: 152.5px;
+	border-radius: 8px;
+	border: none;
+}
+.goldMineButton:active {
+	transform: scale(0.95);
+}
+#mineOreTable {
+	border-collapse: collapse;
+	text-align: right;
+	vertical-align: middle;
 }
