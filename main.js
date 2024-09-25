@@ -1,4 +1,9 @@
 var rocks = 0;
+var coalOre = 0;
+var copperOre = 0;
+var tinOre = 0;
+var ironOre = 0;
+var goldOre = 0;
 var pickBonus = 0;
 var pick = 1;
 
@@ -6,6 +11,35 @@ function rockClick(number){
 	rocks = rocks + number;
 	document.getElementById("rocks").innerHTML = rocks;
 };
+function coalClick(number){
+	coalOre = coalOre + number;
+	document.getElementById("coalOre").innerHTML = coalOre;
+};
+function copperClick(number){
+	copperOre = copperOre + number;
+	document.getElementById("copperOre").innerHTML = copperOre;
+};
+function tinClick(number){
+	tinOre = tinOre + number;
+	document.getElementById("tinOre").innerHTML = tinOre;
+};
+function ironClick(number){
+	ironOre = ironOre + number;
+	document.getElementById("ironOre").innerHTML = ironOre;
+};
+function goldClick(number){
+	goldOre = goldOre + number;
+	document.getElementById("goldOre").innerHTML = goldOre;
+};
+
+
+
+
+
+
+
+
+
 
 function upgradePickaxe(){
 	var upgradeCost = Math.floor(10 * Math.pow(1.1,pickBonus));  	//works out the cost of this upgradeCost
