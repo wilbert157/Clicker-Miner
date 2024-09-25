@@ -101,3 +101,19 @@ thead th {
 	background-color: #000000;
 	color: white;
 }
+.copperMineButton {
+	background-color: #b87333;
+	color: white;
+}
+.tinMineButton {
+	background-color: #dddddd;
+	color: black;
+}
+.ironMineButton {
+	background-color: #A59C94;
+	color: white;
+}
+.goldMineButton {
+	background-color: #ffd700;
+	color: black;
+}
